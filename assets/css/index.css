@@ -1,10 +1,14 @@
 @font-face {
     font-family: 'Roboto';
-    src: url("/assets/fonts/roboto/Roboto-Regular.ttf") format(truetype);
+    font-weight: 400;
+    src: local("Roboto Regular") url("/assets/fonts/roboto/Roboto-Regular.ttf") format(truetype);
+    font-style: normal;
 }
 @font-face {
-    font-family: 'Roboto Thin';
-    src: url("/assets/fonts/roboto/Roboto-Light.ttf") format(truetype);
+    font-family: 'Roboto';
+    font-weight: 300;
+    src: local("Roboto Light") url("/assets/fonts/roboto/Roboto-Light.ttf") format(truetype);
+    font-style: normal;
 }
 body {
     padding: 0;
@@ -17,37 +21,42 @@ body {
 #background-slider {
     position: relative;
     margin-top: 10rem;
+    margin-bottom: -230px;
 }
 #background-slider img {
     width: 100%;
+    background-repeat: no-repeat;
     height: 600px;
     background-size: cover;
 }
 img.image-slide {
-    bottom: 680px;
+    bottom: auto;
     left: 0;
     right: 0;
     margin: auto;
     position: absolute;
-    top: 0;
+    top: -69px;
     border-radius: 50%;
     border: 10px solid #fff;
     width: 12rem;
     height: 12rem;
 }
 .text {
+    padding: 0 30px;
     text-align: center;
     margin: 0;
     position: relative;
-    bottom: 430px;
+    bottom: 200px;
     color: #fff;
 }
 .text h2 {
-    font-size: 29px;
+    font-size: 25px;
     font-family: 'Roboto';
+    font-weight: 400;
 }
 .text p {
     font-family: 'Roboto';
+    font-weight: 300;
 }
 .button {
     position: absolute;
@@ -57,7 +66,7 @@ img.image-slide {
     width: 130px;
     height: 30px;
     line-height: 30px;
-    padding: 10px 5px;
+    padding: 10px 10px;
     color: #FFF;
     border-radius: 50px;
     text-decoration: none;
@@ -69,6 +78,7 @@ img.image-slide {
     right: 0;
     margin: auto;
     top: 0;
+    margin-top: 190px;
     bottom: 0;
 }
 .slick-dots {
@@ -76,26 +86,163 @@ img.image-slide {
     padding: 0;
 }
 .slick-dots li {
+    margin-top: 10rem;
+    margin-bottom: -6rem;
+    position: relative;
     display: inline-block;
-    width: 21px;
-    height: 21px;
-    margin-right: 1.5rem;
-    border: 3px solid #000;
+    width: 15px;
+    height: 15px;
+    margin-right: 0.7rem;
+    border: 3px solid #fff;
     border-radius: 50%;
 }
-.slick-dots li button {
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    outline: none;
-    background: transparent;
+.slick-dots li:hover {
+    background-color: #fff;
 }
-.slide-next, .slide-prev {
-    display: none;
+.slick-dots li.active {
+    background-color: #fff;
+    color: #fff;
+}
+.slide-next {
+    width: 4.5rem;
+    height: 6.5rem;
+    position: absolute;
+    bottom: 4rem;
+    right: 20px;
+    z-index: 10;
+    line-height: 0;
+    font-size: 0;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    border: none;
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.slide-prev {
+    width: 4.5rem;
+    height: 6.5rem;
+    position: absolute;
+    bottom: 4rem;
+    transform: rotate(180deg);
+    left: 20px;
+    right: auto;
+    z-index: 10;
+    line-height: 0;
+    font-size: 0;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    border: none;
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+@media (min-width: 768px) {
+    #highlight-slider {
+        flex-direction: row;
+        position: relative;
+    }
+    #background-slider img {
+        height: 680px;
+    }
+    img.image-slide {
+        width: 18rem;
+        height: 18rem;
+        border: 15px solid #fff;
+        margin-left: 30px;
+        position: absolute;
+        top: -40px;
+    }
+    .text {
+        width: 350px;
+        height:200px;
+        border:2px;
+        padding:20px;
+        right: -5px;
+        text-align: left;
+        position: absolute;
+        top: 20px;
+    }
+    .text h2 {
+        font-size: 35px;
+    }
+    .text p {
+        font-size: 23px;
+    }
+    .button {
+        margin-top: 300px;
+        right: 170px;
+        height: 39px;
+        width: 160px;
+        line-height: 39px;
+    }
+    .slick-dots li {
+        position: relative;
+        margin-top: 15rem;
+        right: 100px;
+    }
+}
+@media (min-width: 1200px) {
+    img.image-slide {
+        top: -35px;
+        width: 31rem;
+        height: 31rem;
+        border: 20px solid #fff;
+        margin-left: 35px;
+    }
+    .text {
+        width: 480px;
+        height:200px;
+        border:2px;
+        padding:20px;
+        right: 70px;
+        text-align: left;
+        position: absolute;
+        top: 20px;
+    }
+    .button {
+        right: 310px;
+    }
+    .slick-dots li {
+        right: 170px;
+    }
+}
+@media (min-width: 1920px) {
+    #background-slider img {
+        height: 650px;
+    }
+    img.image-slide {
+        top: -75px;
+        width: 33rem;
+        height: 33rem;
+        border: 20px solid #fff;
+        margin-left: 295px;
+    }
+    .text {
+        width: 600px;
+        height:200px;
+        border:2px;
+        padding:20px;
+        right: 300px;
+        text-align: left;
+        position: absolute;
+        top: 20px;
+    }
+    .button {
+        height: 49px;
+        width: 170px;
+        line-height: 49px;
+        right: 410px;
+    }
+    .slick-dots li {
+        right: 210px;
+    }
+    .slide-next {
+        right: 150px;
+    }
+    .slide-prev {
+        left: 150px;
+    }
 }
