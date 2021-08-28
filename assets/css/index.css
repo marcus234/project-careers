@@ -17,36 +17,31 @@ body {
 #highlight-slider {
     flex-direction: column;
     position: relative;
-}
-#background-slider {
-    position: relative;
-    margin-top: 10rem;
-    margin-bottom: -230px;
-}
-#background-slider img {
     width: 100%;
-    background-repeat: no-repeat;
     height: 600px;
+    background-image: url('../images/background-slider.png');
+    margin-top: 10rem;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 img.image-slide {
+    transform: translateY(-50px);
+    display: flex;
+    position: relative;
     bottom: auto;
     left: 0;
+    top: auto;
     right: 0;
     margin: auto;
-    position: absolute;
-    top: -69px;
     border-radius: 50%;
     border: 10px solid #fff;
     width: 12rem;
     height: 12rem;
 }
 .text {
+    margin-top: 10px;
     padding: 0 30px;
     text-align: center;
-    margin: 0;
-    position: relative;
-    bottom: 200px;
     color: #fff;
 }
 .text h2 {
@@ -59,7 +54,6 @@ img.image-slide {
     font-weight: 300;
 }
 .button {
-    position: absolute;
     background-color: #0BAADB;
     font-size: 20px;
     display: block;
@@ -78,7 +72,6 @@ img.image-slide {
     right: 0;
     margin: auto;
     top: 0;
-    margin-top: 190px;
     bottom: 0;
 }
 .slick-dots {
@@ -86,9 +79,8 @@ img.image-slide {
     padding: 0;
 }
 .slick-dots li {
-    position: relative;
-    margin-top: 10rem;
-    margin-bottom: -6rem;
+    margin-top: -2rem;
+    margin-bottom: 6rem;
     position: relative;
     display: inline-block;
     width: 15px;
@@ -153,7 +145,6 @@ img.image-slide {
         height: 18rem;
         border: 15px solid #fff;
         margin-left: 30px;
-        position: absolute;
         top: -40px;
     }
     .text {
@@ -163,7 +154,6 @@ img.image-slide {
         padding:20px;
         right: -5px;
         text-align: left;
-        position: absolute;
         top: 20px;
     }
     .text h2 {
@@ -181,8 +171,8 @@ img.image-slide {
     }
     .slick-dots li {
         position: relative;
-        margin-top: 15rem;
-        right: 100px;
+        margin-top: 8rem;
+        right: -100px;
     }
 }
 @media (min-width: 1200px) {
@@ -200,14 +190,13 @@ img.image-slide {
         padding:20px;
         right: 70px;
         text-align: left;
-        position: absolute;
         top: 20px;
     }
     .button {
         right: 310px;
     }
     .slick-dots li {
-        right: 170px;
+        right: -100px;
     }
 }
 @media (min-width: 1920px) {
@@ -228,7 +217,6 @@ img.image-slide {
         padding:20px;
         right: 300px;
         text-align: left;
-        position: absolute;
         top: 20px;
     }
     .button {
@@ -238,7 +226,7 @@ img.image-slide {
         right: 410px;
     }
     .slick-dots li {
-        right: 210px;
+        right: -120px;
     }
     .slide-next {
         right: 150px;

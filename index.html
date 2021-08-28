@@ -16,16 +16,11 @@
         <div class="region region-highlight-slider">
 
             <div id="block-highlight-slider" class="block block-highlight">
-
-                
-                <div id="background-slider" alt="background-slider">
-                    <img src="assets/images/background-slider.png" alt="background-slider">
-                </div>
                 
                 <div class="carousel">
-
+                    
                     <div id="images-slider">
-                                                                           
+                        
                         <div>
                             <img class="image-slide" src="assets/images/image-1.jpg" alt="image">
                         
@@ -37,21 +32,70 @@
                                 
                                 <a class="button" href="#">Register</a>
     
-                                <ul class="slick-dots">
-                                    <li class id="slick-slide01"></li>
-                                    <li class id="slick-slide02"></li>
-                                    <li class id="slick-slide03"></li>
-                                    <li class id="slick-slide04"></li>
-                                </ul>
-    
+                                
                             </div>
                             
-                            <button type="button" class="slide-prev"><img src="assets/images/arrow-prev.svg" alt=""></button>
-                            <button type="button" class="slide-next"><img src="assets/images/arrow-next.svg" alt=""></button>
-
                         </div>
-                                                
+
+                        <div>
+                            <img class="image-slide" src="assets/images/image-1.jpg" alt="image">
+                        
+                            <div class="text">
+                            
+                                <h2>Say Yes to Give Life</h2>
+                                
+                                <p>Every day, 22 patients die while waiting for an organ. For those awaiting transplant, organ and tissue donation is a matter of life and death.</p>
+                                
+                                <a class="button" href="#">Register</a>
+    
+                                
+                            </div>
+                            
+                        </div>
+
+                        <div>
+                            <img class="image-slide" src="assets/images/image-1.jpg" alt="image">
+                        
+                            <div class="text">
+                            
+                                <h2>Say Yes to Give Life</h2>
+                                
+                                <p>Every day, 22 patients die while waiting for an organ. For those awaiting transplant, organ and tissue donation is a matter of life and death.</p>
+                                
+                                <a class="button" href="#">Register</a>
+    
+                                
+                            </div>
+                            
+                        </div>
+
+                        <div>
+                            <img class="image-slide" src="assets/images/image-1.jpg" alt="image">
+                        
+                            <div class="text">
+                            
+                                <h2>Say Yes to Give Life</h2>
+                                
+                                <p>Every day, 22 patients die while waiting for an organ. For those awaiting transplant, organ and tissue donation is a matter of life and death.</p>
+                                
+                                <a class="button" href="#">Register</a>
+    
+                                
+                            </div>
+                            
+                        </div>
+                        
                     </div>
+
+                    <!--<ul class="slick-dots">
+                        <li class id="slick-slide01"></li>
+                        <li class id="slick-slide02"></li>
+                        <li class id="slick-slide03"></li>
+                        <li class id="slick-slide04"></li>
+                    </ul>
+
+                    <button type="button" class="slide-prev"><img src="assets/images/arrow-prev.svg" alt=""></button>
+                    <button type="button" class="slide-next"><img src="assets/images/arrow-next.svg" alt=""></button>-->
                     
                 </div>
 
@@ -65,13 +109,11 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="assets/slick-slider/slick/slick.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
-  
-            $('.carousel').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
+        $(document).ready(function() {
+
+            $("#images-slider").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1
             });
 
         });
