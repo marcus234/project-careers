@@ -38,15 +38,15 @@
                         </div>
 
                         <div>
-                            <img class="image-slide" src="assets/images/image-1.jpg" alt="image">
+                            <img class="image-slide" src="assets/images/image-2.jpg" alt="image">
                         
                             <div class="text">
                             
-                                <h2>Say Yes to Give Life</h2>
+                                <h2>Meet Our Heroes</h2>
                                 
-                                <p>Every day, 22 patients die while waiting for an organ. For those awaiting transplant, organ and tissue donation is a matter of life and death.</p>
+                                <p>Behind every donation and every transplant is a person. Explore stories from donor families remembering their loved ones and patients grateful for a second chance.</p>
                                 
-                                <a class="button" href="#">Register</a>
+                                <a class="button" href="#">See the Stories</a>
     
                                 
                             </div>
@@ -54,15 +54,15 @@
                         </div>
 
                         <div>
-                            <img class="image-slide" src="assets/images/image-1.jpg" alt="image">
+                            <img class="image-slide" src="assets/images/image-3.jpg" alt="image">
                         
                             <div class="text">
                             
-                                <h2>Say Yes to Give Life</h2>
+                                <h2>Join Our Team</h2>
                                 
-                                <p>Every day, 22 patients die while waiting for an organ. For those awaiting transplant, organ and tissue donation is a matter of life and death.</p>
+                                <p>Looking for a career with meaning? We’re always looking for bright, inspired individuals to be a part of this important work.</p>
                                 
-                                <a class="button" href="#">Register</a>
+                                <a class="button" href="#">View Careers</a>
     
                                 
                             </div>
@@ -70,15 +70,15 @@
                         </div>
 
                         <div>
-                            <img class="image-slide" src="assets/images/image-1.jpg" alt="image">
+                            <img class="image-slide" src="assets/images/image-4.jpg" alt="image">
                         
                             <div class="text">
                             
-                                <h2>Say Yes to Give Life</h2>
+                                <h2>Events</h2>
                                 
-                                <p>Every day, 22 patients die while waiting for an organ. For those awaiting transplant, organ and tissue donation is a matter of life and death.</p>
+                                <p>Join us at events to honor, celebrate, and support organ, eye and tissue donation</p>
                                 
-                                <a class="button" href="#">Register</a>
+                                <a class="button" href="#">View Events</a>
     
                                 
                             </div>
@@ -87,7 +87,7 @@
                         
                     </div>
 
-                    <!--<ul class="slick-dots">
+                    <ul class="slick-dots">
                         <li class id="slick-slide01"></li>
                         <li class id="slick-slide02"></li>
                         <li class id="slick-slide03"></li>
@@ -95,7 +95,7 @@
                     </ul>
 
                     <button type="button" class="slide-prev"><img src="assets/images/arrow-prev.svg" alt=""></button>
-                    <button type="button" class="slide-next"><img src="assets/images/arrow-next.svg" alt=""></button>-->
+                    <button type="button" class="slide-next"><img src="assets/images/arrow-next.svg" alt=""></button>
                     
                 </div>
 
@@ -112,8 +112,10 @@
         $(document).ready(function() {
 
             $("#images-slider").slick({
+                dots: true,
                 slidesToShow: 1,
-                slidesToScroll: 1
+                autoplay: true,
+                autoplaySpeed: 10000,
             });
 
         });
