@@ -53,7 +53,7 @@ img.image-slide {
 .button {
     transform: translateY(30px);
     background-color: #0BAADB;
-    font-size: 20px;
+    font-size: 17px;
     display: block;
     width: 130px;
     height: 25px;
@@ -71,6 +71,9 @@ img.image-slide {
     margin: auto;
     top: 0;
     bottom: 0;
+}
+.button:hover {
+    background-color: #2D79B9;
 }
 .slick-dots {
     text-align: center;
@@ -93,12 +96,15 @@ img.image-slide {
     background-color: #fff;
     color: #fff;
 }
-.slide-next {
+.slick-dots li button {
+    display: none;
+}
+.slick-next:before {
+    transform: translateX(-80px) translateY(265px);
+    display: flex;
     width: 4.5rem;
     height: 6.5rem;
-    position: absolute;
     bottom: 4rem;
-    right: 20px;
     z-index: 10;
     line-height: 0;
     font-size: 0;
@@ -109,20 +115,23 @@ img.image-slide {
     outline: none;
     background-repeat: no-repeat;
     background-position: center center;
+    background-image: url('../images/arrow-next.svg');
 }
-.slide-prev {
+.slick-prev {
+    left: 0;
+}
+.slick-prev:before {
+    display: flex;
+    background-image: url('../images/arrow-prev.svg');
     width: 4.5rem;
     height: 6.5rem;
-    position: absolute;
     bottom: 4rem;
-    transform: rotate(180deg);
-    left: 20px;
+    transform: rotate(180deg) translateY(-265px);
     right: auto;
     z-index: 10;
     line-height: 0;
     font-size: 0;
     cursor: pointer;
-    background: transparent;
     color: transparent;
     border: none;
     outline: none;
@@ -170,7 +179,13 @@ img.image-slide {
         margin-left: 120px;
     }
     .slick-dots li {
-        transform: translateY(-85px);
+        transform: translateY(-75px);
+    }
+    .slick-next:before {
+        transform: translateX(-80px) translateY(160px);
+    }
+    .slick-prev:before {
+        transform: rotate(180deg) translateY(-160px);
     }
 }
 @media (min-width: 1200px) {
@@ -197,7 +212,17 @@ img.image-slide {
         margin-left: 10px;
     }
     .slick-dots li {
-        transform: translateY(-250px);
+        transform: translateY(-290px);
+    }
+    .slick-next:before {
+        transform: translateX(-200px) translateY(70px);
+    }
+    .slide-prev {
+        left: 500px;
+    }
+    .slick-prev:before {
+        transform: rotate(180deg) translateY(-70px);
+        margin-left: 150px;
     }
 }
 @media (min-width: 1920px) {
